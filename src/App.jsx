@@ -26,9 +26,7 @@ function App() {
     <div className="flex items-center justify-center min-h-screen bg-gray-100" >
       <DropdownMenu />
     </div>
-    <div id="encavesado" className=" w-full">
-      <h1 className="text-4xl font-bold text-green-700 shadow-lg border-black border-2">hola caja</h1>
-    </div>
+    
     <div className="flex flex-wrap items-center justify-center min-h-screen bg-gray-100 gap-8 p-4 ">
       {profiles.map((profile,index) => (
         <ProfileCard 
