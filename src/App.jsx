@@ -1,6 +1,7 @@
 import DropdownMenu from "../components/DropdownMenu"
 import Header from "../components/Header"
 import ProfileCard from "../components/ProfileCard"
+import Carousel from "../components/Carousel"
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
     return (
     <>
     <Header></Header>
-     <div className="font-bold">hola </div>
+     
     <div className="flex items-center justify-center min-h-screen bg-gray-100" >
       <DropdownMenu />
     </div>
@@ -36,6 +37,9 @@ function App() {
           image={profile.image}
           bio={profile.bio}/>
       ))}
+    </div>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <Carousel />
     </div>
     </>
   )
