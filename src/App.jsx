@@ -2,6 +2,7 @@ import DropdownMenu from "../components/DropdownMenu"
 import Header from "../components/Header"
 import ProfileCard from "../components/ProfileCard"
 import Carousel from "../components/Carousel"
+import DraggableList from "../components/DraggableList"
 
 function App() {
 
@@ -22,7 +23,10 @@ function App() {
 
     return (
     <>
+    <div className="overflow-hidden">
     <Header></Header>
+
+    </div>
      
     <div className="flex items-center justify-center min-h-screen bg-gray-100" >
       <DropdownMenu />
@@ -38,8 +42,11 @@ function App() {
           bio={profile.bio}/>
       ))}
     </div>
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 overflow-hidden">
       <Carousel />
+    </div>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <DraggableList />
     </div>
     </>
   )
