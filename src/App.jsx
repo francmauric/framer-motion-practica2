@@ -3,6 +3,7 @@ import Header from "../components/Header"
 import ProfileCard from "../components/ProfileCard"
 import Carousel from "../components/Carousel"
 import DraggableList from "../components/DraggableList"
+import CardPokemon from "../components/CardPokemon"
 
 function App() {
 
@@ -47,6 +48,11 @@ function App() {
     </div>
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <DraggableList />
+    </div>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 ">
+      <CardPokemon pokemon="pikachu" />
+      <CardPokemon pokemon="bulbasaur" />
+      <CardPokemon pokemon="charmander" />
     </div>
     </>
   )
