@@ -23,7 +23,10 @@ function CardPokemon ({pokemon}) {
     if (!details) return <div>Loading...</div>
 
     return (
-        <div className="max-w-sm mx-auto my-4 p-4 bg-white rounded-lg shadow-lg">
+        <motion.div className="max-w-sm mx-auto my-4 p-4 bg-white rounded-lg shadow-lg"
+            whileHover={{scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)"}}
+            transition={{type: "spring",stiffness: 300}}
+            >
             <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-bold">{details.name}</h2>
                 <button
@@ -44,9 +47,9 @@ function CardPokemon ({pokemon}) {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ height:0, opacity:0}}
-                        animate={{height: "auto",opacity:1}}
-                        exit={{height:0, opacity:0}}
+                        initial={{ height:0, opacity:0, rotate: -10, scale:0.8}}
+                        animate={{height: "auto",opacity:1, rotate: 360, scale: 1}}
+                        exit={{height:0, opacity:0, rotate: 10, scale: 0.8}}
                         transition={{ duration:0.5 }}
                         className="overflow-hidden"
                     >
@@ -58,7 +61,7 @@ function CardPokemon ({pokemon}) {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </motion.div>
     )
 }
 
