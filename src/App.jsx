@@ -44,18 +44,21 @@ function App() {
           bio={profile.bio}/>
       ))}
     </div>
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 overflow-hidden">
+    <div id="carousel" className="flex bg-gray-800 items-center justify-center min-h-screen  overflow-hidden">
       <Carousel />
     </div>
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <DraggableList />
     </div>
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 ">
+    <div id="card" className="bg-gray-800 flex flex-wrap items-center justify-center min-h-screen bg-gray-100 ">
+      <CardPokemon pokemon="pikachu" />
+      <CardPokemon pokemon="bulbasaur" />
+      <CardPokemon pokemon="charmander" />
       <CardPokemon pokemon="pikachu" />
       <CardPokemon pokemon="bulbasaur" />
       <CardPokemon pokemon="charmander" />
     </div>
-    <div>
+    <div id="section">
       <Beneficios />
     </div>
     </>

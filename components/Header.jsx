@@ -7,7 +7,7 @@ function Header () {
     console.log(isOpen)
     const burger = {
         opened:(deg) => ({
-            rotate:deg,
+            rotate: deg,
         }),
         closed: {
             rotate:0,
@@ -32,6 +32,7 @@ function Header () {
         }
     }
 
+    
 
     return(
         <div className="header-div h-screen w-screen bg-[#eaeaea] overflow-hidden"> 
@@ -59,7 +60,7 @@ function Header () {
         <AnimatePresence mode="wait">
         {
          isOpen ? (
-             <NavBarNuevo />
+             <NavBarNuevo setIsOpen={setIsOpen}/>
          ) : null
         }        
          </AnimatePresence>   

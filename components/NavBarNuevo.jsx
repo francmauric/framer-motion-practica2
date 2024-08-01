@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 
-function NavBarNuevo () {
+
+function NavBarNuevo ({setIsOpen}) {
+   
+
     const children = {
         hidden: {
             clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%",
@@ -44,6 +47,10 @@ function NavBarNuevo () {
         }
     }
 
+    const handleLinkClick = () => {
+        setIsOpen(false)
+    }
+
     return (
         <div className="w-screen h-screen overflow-hidden fixed inset-0">
             <div className="w-full h-full grid grid-cols-20 grid-rows-1">
@@ -61,25 +68,25 @@ function NavBarNuevo () {
                     <li className="overflow-hidden">
                         <motion.div variants={navLink} 
                                 initial="hidden" animate="show" exit="exit">
-                            <a href="#" className="text-[80px] hover:text-[#eaeaea] "  >ART</a>
+                            <a href="#header-div" className="text-[80px] hover:text-[#eaeaea] "  onClick={handleLinkClick}  >ART</a>
                         </motion.div>
                     </li>
                     <li className="overflow-hidden">
                         <motion.div variants={navLink} 
                                 initial="hidden" animate="show" exit="exit">
-                            <a href="#" className="text-[80px] hover:text-[#eaeaea] "   >TEAM</a>
+                            <a href="#carousel" className="text-[80px] hover:text-[#eaeaea] " onClick={handleLinkClick}   >CAROUSEL</a>
                         </motion.div>
                     </li>
                     <li className="overflow-hidden">
                         <motion.div variants={navLink} 
                                 initial="hideen" animate="show" exit="exit">
-                            <a href="#" className="text-[80px] hover:text-[#eaeaea] "  >STUDIO</a>
+                            <a href="#card" className="text-[80px] hover:text-[#eaeaea] "  onClick={handleLinkClick} >CARDS</a>
                         </motion.div>
                     </li>
                     <li className="overflow-hidden">
                         <motion.div variants={navLink} 
                                 initial="hideen" animate="show" exit="exit">
-                            <a href="#" className="text-[80px] hover:text-[#eaeaea] "  >ABOUT</a>
+                            <a href="#section" className="text-[80px] hover:text-[#eaeaea] " onClick={handleLinkClick}  >SECTIONS</a>
                         </motion.div>
                     </li>
                     
