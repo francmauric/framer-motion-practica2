@@ -4,6 +4,7 @@ import ProfileCard from "../components/ProfileCard"
 import Carousel from "../components/Carousel"
 import DraggableList from "../components/DraggableList"
 import CardPokemon from "../components/CardPokemon"
+import Beneficios from "../components/Beneficios"
 
 function App() {
 
@@ -53,6 +54,9 @@ function App() {
       <CardPokemon pokemon="pikachu" />
       <CardPokemon pokemon="bulbasaur" />
       <CardPokemon pokemon="charmander" />
+    </div>
+    <div>
+      <Beneficios />
     </div>
     </>
   )
