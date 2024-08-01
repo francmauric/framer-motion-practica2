@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel"
 import DraggableList from "../components/DraggableList"
 import CardPokemon from "../components/CardPokemon"
 import Beneficios from "../components/Beneficios"
+import Logo from "../components/Logo"
 
 function App() {
 
@@ -60,6 +61,9 @@ function App() {
     </div>
     <div id="section">
       <Beneficios />
+    </div>
+    <div>
+      <Logo />
     </div>
     </>
   )

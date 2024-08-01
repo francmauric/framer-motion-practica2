@@ -23,7 +23,7 @@ function CardPokemon ({pokemon}) {
     if (!details) return <div>Loading...</div>
 
     return (
-        <motion.div className="max-w-sm mx-auto my-4 p-4 bg-white rounded-lg shadow-white shadow-md"
+        <motion.div className="max-w-sm blur hover:blur-none mx-auto my-4 p-4 bg-white rounded-lg shadow-white shadow-md"
             whileHover={{scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)"}}
             transition={{type: "spring",stiffness: 300}}
             >
