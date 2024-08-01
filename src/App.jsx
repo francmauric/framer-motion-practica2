@@ -29,6 +29,9 @@ function App() {
     <div className="overflow-hidden">
     <Header></Header>
 
+        <div>
+          <Logo />
+        </div>
     </div>
      
     <div className="flex items-center justify-center min-h-screen bg-gray-100" >
@@ -61,9 +64,6 @@ function App() {
     </div>
     <div id="section">
       <Beneficios />
-    </div>
-    <div>
-      <Logo />
     </div>
     </>
   )
