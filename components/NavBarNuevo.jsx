@@ -68,25 +68,25 @@ function NavBarNuevo ({setIsOpen}) {
                     <li className="overflow-hidden">
                         <motion.div variants={navLink} 
                                 initial="hidden" animate="show" exit="exit">
-                            <a href="#header-div" className="text-[80px] hover:text-[#eaeaea] "  onClick={handleLinkClick}  >ART</a>
+                            <a href="#section-header" className="text-[80px] hover:text-[#eaeaea] "  onClick={handleLinkClick}  >ART</a>
                         </motion.div>
                     </li>
                     <li className="overflow-hidden">
                         <motion.div variants={navLink} 
                                 initial="hidden" animate="show" exit="exit">
-                            <a href="#carousel" className="text-[80px] hover:text-[#eaeaea] " onClick={handleLinkClick}   >CAROUSEL</a>
+                            <a href="#section-carousel" className="text-[80px] hover:text-[#eaeaea] " onClick={handleLinkClick}   >CAROUSEL</a>
                         </motion.div>
                     </li>
                     <li className="overflow-hidden">
                         <motion.div variants={navLink} 
                                 initial="hideen" animate="show" exit="exit">
-                            <a href="#card" className="text-[80px] hover:text-[#eaeaea] "  onClick={handleLinkClick} >CARDS</a>
+                            <a href="#section-card" className="text-[80px] hover:text-[#eaeaea] "  onClick={handleLinkClick} >CARDS</a>
                         </motion.div>
                     </li>
                     <li className="overflow-hidden">
                         <motion.div variants={navLink} 
                                 initial="hideen" animate="show" exit="exit">
-                            <a href="#section" className="text-[80px] hover:text-[#eaeaea] " onClick={handleLinkClick}  >SECTIONS</a>
+                            <a href="#section-beneficios" className="text-[80px] hover:text-[#eaeaea] " onClick={handleLinkClick}  >SECTIONS</a>
                         </motion.div>
                     </li>
                     

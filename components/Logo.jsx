@@ -24,6 +24,8 @@ function Logo () {
             left:"50%",
             scale:1,
             rotate:0,
+            translateX: "-50%",
+            translateY: "-50%"
         },
         left: {
             top:"10%",
@@ -37,14 +39,22 @@ function Logo () {
             scale:0.8,
             rotate:10,
         },
+        bottomLeft: {
+            bottom:"10%",
+            left:"5%",
+            scale:0.6,
+            rotate:-15,
+        },
     };
 
     let logoPosition = "center"; 
         
-    if (scrollPosition > window.innerHeight) {
-            logoPosition = "left";
-    } else if (scrollPosition > window.innerHeight * 2) {
-        logoPosition = "right"
+    if (scrollPosition > window.innerHeight * 2) {
+            logoPosition = "bottomLeft";
+    } else if (scrollPosition > window.innerHeight * 1.5 ) {    
+            logoPosition = "right"
+    } else if (scrollPosition > window.innerHeight ) {
+            logoPosition = "left"
     }
     
 
