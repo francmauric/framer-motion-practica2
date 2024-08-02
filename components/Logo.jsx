@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import {motion} from "framer-motion";
+import {motion, transform} from "framer-motion";
  
 
 
-function Logo () {
+function Logo ({ sectionRefs }) {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [logoPosition, setLogoPosition] = useState('center');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,45 +19,64 @@ function Logo () {
         };
     }, []);
 
+    
     const logoVariants = {
         center: {
             top:"50%",
             left:"50%",
             scale:1,
             rotate:0,
-            translateX: "-50%",
-            translateY: "-50%"
+            transform: "translate(-50%, -50%)",
         },
         left: {
             top:"10%",
             left:"5%",
             scale:0.8,
             rotate:-10,
+            transform:"translate(0%,0%)",
         },
         right: {
-            top:"20%",
+            top:"10%",
+            left: "auto",
             right:"5%",
             scale:0.8,
             rotate:10,
+            transform: "translate(0%,0%)",
         },
         bottomLeft: {
+            top:"auto",
             bottom:"10%",
             left:"5%",
-            scale:0.6,
+            scale:2,
             rotate:-15,
+            transform:"translate(0%,0%)",
         },
     };
-
-    let logoPosition = "center"; 
-        
-    if (scrollPosition > window.innerHeight * 2) {
-            logoPosition = "bottomLeft";
-    } else if (scrollPosition > window.innerHeight * 1.5 ) {    
-            logoPosition = "right"
-    } else if (scrollPosition > window.innerHeight ) {
-            logoPosition = "left"
-    }
     
+    useEffect(() => {
+        const { section1Ref, section2Ref, section3Ref, section4Ref, section5Ref } = sectionRefs;
+
+        const section1Top = section1Ref.current.offsetTop;
+        const section2Top = section2Ref.current.offsetTop;
+        const section3Top = section3Ref.current.offsetTop;
+        const section4Top = section4Ref.current.offsetTop;
+        const section5Top = section5Ref.current.offsetTop;
+
+        let logoPosition = 'center';
+
+        if (scrollPosition >= section5Top) {
+            logoPosition = "bottomLeft";
+            } else if (scrollPosition >= section4Top) {    
+                logoPosition = "right";
+        } else if (scrollPosition >= section3Top ) {
+                logoPosition = "left";
+        } else if (scrollPosition >= section2Top ) {
+                logoPosition = "right";
+        } 
+        
+        setLogoPosition(logoPosition)
+    }, [scrollPosition,sectionRefs])
+   
 
 
     return (

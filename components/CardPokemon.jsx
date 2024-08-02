@@ -6,7 +6,7 @@ function CardPokemon ({pokemon}) {
     const [details, setDetails] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
 
-    console.log(details)
+    /* console.log(details) */
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
             .then((response) => {

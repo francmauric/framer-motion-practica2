@@ -21,6 +21,11 @@ const benefits = [
         description: "El padel requiere coordinacion mano-ojo y agilidad, lo que mejora tus habilidades motoras.",
         image: "/image/padel/padel4.jpg",
     },
+    {
+        title: "Mejora la coordinacion",
+        description: "El padel requiere coordinacion mano-ojo y agilidad, lo que mejora tus habilidades motoras.",
+        image: "/image/padel/padel5.jpg",
+    },
     
 ]
 

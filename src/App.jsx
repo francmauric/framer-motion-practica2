@@ -6,6 +6,7 @@ import DraggableList from "../components/DraggableList";
 import CardPokemon from "../components/CardPokemon";
 import Beneficios from "../components/Beneficios";
 import Logo from "../components/Logo";
+import { useRef } from "react";
 
 function App() {
   const profiles = [
@@ -23,12 +24,25 @@ function App() {
     },
   ];
 
+  const section1Ref = useRef(null);
+  const section2Ref = useRef(null);
+  const section3Ref = useRef(null);
+  const section4Ref = useRef(null);
+  const section5Ref = useRef(null);
+
   return (
     <>
       <div>
-        <Logo />
+        <Logo 
+            sectionRefs = {{
+              section1Ref,
+              section2Ref,
+              section3Ref,
+              section4Ref,
+              section5Ref,
+            }} />
       </div>
-      <div id="section-header" className="overflow-hidden">
+      <div ref={section1Ref} id="section-header" className="overflow-hidden">
         <Header></Header>
       </div>
 
@@ -47,16 +61,18 @@ function App() {
           />
         ))}
       </div> */}
-      <div
+      <div 
+        ref={section2Ref}
         id="section-carousel"
         className="flex bg-gray-800 items-center justify-center min-h-screen  overflow-hidden"
       >
         <Carousel />
       </div>
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div ref={section3Ref} className="flex items-center justify-center min-h-screen bg-gray-100">
         <DraggableList />
       </div>
       <div
+        ref={section4Ref}
         id="section-card"
         className="bg-gray-800 flex flex-wrap items-center justify-center min-h-screen bg-gray-100 "
       >
@@ -67,7 +83,7 @@ function App() {
         <CardPokemon pokemon="bulbasaur" />
         <CardPokemon pokemon="charmander" />
       </div>
-      <div id="section-beneficios">
+      <div ref={section5Ref} id="section-beneficios">
         <Beneficios />
       </div>
     </>

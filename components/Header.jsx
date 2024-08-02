@@ -4,7 +4,7 @@ import NavBarNuevo from "./NavBarNuevo";
 
 function Header () {
     const [isOpen, setIsOpen] = useState(false)
-    console.log(isOpen)
+    /* console.log(isOpen) */
     const burger = {
         opened:(deg) => ({
             rotate: deg,
