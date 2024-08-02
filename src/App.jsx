@@ -46,7 +46,7 @@ function App() {
         <Header></Header>
       </div>
 
-      {/* <div id="section-dropdownMenu" className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div id="section-dropdownMenu" className="flex items-center justify-center min-h-screen bg-gray-100">
         <DropdownMenu />
       </div>
 
@@ -60,7 +60,7 @@ function App() {
             bio={profile.bio}
           />
         ))}
-      </div> */}
+      </div>
       <div 
         ref={section2Ref}
         id="section-carousel"
